@@ -1,0 +1,97 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.file-label {
+  display: flex;
+  align-items: center;
+}
+/* student card start */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.item {
+  width: 17%; /* Veya istediğiniz başka bir genişlik */
+  margin: 10px;
+  text-align: center;
+}
+
+.student-card {
+  background-color: #fff; /* Arka plan rengi */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+  padding: 15px;
+  border-radius: 8px; /* Köşe yuvarlatma */
+  transition: box-shadow 0.3s ease-in-out; /* Animasyonlu geçiş */
+}
+
+.student-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Mouse üzerine gelindiğinde artan gölge efekti */
+}
+
+.student-card img {
+  max-width: 100%;
+  height: auto;
+}
+/* student card finish */
+
+.variable-declaration,
+.success-message {
+  color: #78dbe7;
+}
+
+.variable-name {
+  color: #aa9cf1;
+}
+
+.variable-declaration-operator,
+.error-message {
+  color: #fe6188;
+}
+
+.variable-value-string {
+  color: #eac660;
+}
+
+.variable-value-boolean {
+  color: #a99bf0;
+}
+
+.condition,
+.condition-parentheses,
+.condition-body-curly-brackets {
+  color: #eb5b7f;
+}
+
+.inside-condition {
+  color: #eac660;
+}
+
+/* carousel start to check  */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-image: none;
+}
+
+.carousel-control-next-icon:after {
+  content: ">";
+  font-size: 55px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control-prev-icon:after {
+  content: "<";
+  font-size: 55px;
+  color: rgba(0, 0, 0, 0.8);
+}
+/* carousel finish to check  */
