@@ -56,13 +56,13 @@ router.post("/create", (req, res) => {
               .then((newUser) => {
                 console.log("USER CHANGED =>", newUser);
                 console.log("THIS LINE IS WORKING 4 ");
-                res.status(200).json({
-                  message: "The project has been successfully created.",
-                });
               })
               .catch((error) => {
                 console.error(error);
               });
+          });
+          res.status(200).json({
+            message: "The project has been successfully created.",
           });
         })
         .catch(() => {
@@ -77,6 +77,19 @@ router.post("/create", (req, res) => {
         "ERROR OCCURED WHILE TRYING TO UPLOAD IMAGES TO CLOUDINARY =>",
         error
       );
+    });
+});
+
+router.get("/allProjects", (req, res) => {
+  Project.find()
+    .populate("owners")
+    .then((allProjectsFromDB) => {
+      console.log(allProjectsFromDB);
+
+      res.json(allProjectsFromDB);
+    })
+    .catch((error) => {
+      console.log(error);
     });
 });
 

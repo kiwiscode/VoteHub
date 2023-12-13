@@ -25,6 +25,12 @@ const projectSchema = new mongoose.Schema({
   projectVideo: {
     type: String, // URL of the project video
   },
+  receivedVotes: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
+  ],
 });
 
 const Project = mongoose.model("Project", projectSchema);

@@ -107,6 +107,7 @@ router.post("/login", (req, res, next) => {
   }
 
   User.findOne({ email })
+    .populate("project")
     .then((foundUser) => {
       if (!foundUser) {
         res.status(401).json({ message: "User not found." });
@@ -150,7 +151,7 @@ router.post("/login", (req, res, next) => {
           algorithm: "HS256",
           expiresIn: "6h",
         });
-
+        console.log("THIS IS THE FOUNDUSER =>", { foundUser });
         foundUser.active = true;
         foundUser.save();
 

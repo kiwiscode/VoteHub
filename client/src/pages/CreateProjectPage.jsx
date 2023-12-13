@@ -69,6 +69,7 @@ function CreateProjectPage() {
   };
 
   useEffect(() => {
+    console.log(owners);
     axios
       .get(`${API_URL}/users`, {
         headers: {
@@ -82,7 +83,7 @@ function CreateProjectPage() {
         console.error(error);
       });
   }, []);
-
+  console.log(owners);
   const handleProjectCreate = () => {
     setSuccess("");
     setIsLoading(true);
@@ -96,6 +97,9 @@ function CreateProjectPage() {
         video,
       })
       .then((response) => {
+        console.log(owners);
+        setOwners([]);
+        console.log(owners);
         setIsLoading(false);
         setSuccess(response.data.message);
       })
