@@ -4,7 +4,9 @@ const User = require("../models/User.model");
 
 router.get("/", (req, res) => {
   User.find()
+    .populate("project")
     .then((allUsersFromDB) => {
+      console.log(allUsersFromDB);
       res.json(allUsersFromDB);
     })
     .catch((error) => {

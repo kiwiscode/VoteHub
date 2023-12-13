@@ -35,15 +35,12 @@ const userSchema = new Schema(
       type: Boolean,
       default: false,
     },
-
-    isVotedForBestProject: {
+    active: {
       type: Boolean,
       default: false,
     },
-    // voteCountForBestProject: {
-    //   type: Number,
-    //   default: 0,
-    // },
+    // start to check for funniest person  votes
+
     theVotesReceivedForTheFunniestPerson: [
       {
         type: Schema.Types.ObjectId,
@@ -60,6 +57,9 @@ const userSchema = new Schema(
       type: Boolean,
       default: false,
     },
+    // finish to check for funniest person  votes
+
+    // start to check for most helpful person  votes
 
     theVotesReceivedForTheHelpfulPerson: [
       {
@@ -77,10 +77,31 @@ const userSchema = new Schema(
       type: Boolean,
       default: false,
     },
-    active: {
+    // finish to check for most helpful person  votes
+
+    // start to check for best project votes
+    voteCountForBestProject: {
+      type: Number,
+      default: 0,
+    },
+    isVotedForBestProject: {
       type: Boolean,
       default: false,
     },
+    votedForBestProjects: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Project",
+      },
+    ],
+    // burası biraz beklesin NOTE
+    // theVotesReceivedForTheBestProject: [
+    //   {
+    //     type: Schema.Types.ObjectId,
+    //     ref: "User",
+    //   },
+    // ],
+    // finish to check for best project votes
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`

@@ -38,7 +38,26 @@
   max-width: 100%;
   height: auto;
 }
+
 /* student card finish */
+.project-card {
+  background-color: #fff; /* Arka plan rengi */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+  padding: 15px;
+  border-radius: 8px; /* Köşe yuvarlatma */
+  transition: box-shadow 0.3s ease-in-out; /* Animasyonlu geçiş */
+}
+.project-card img:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease-in-out;
+}
 
 .variable-declaration,
 .success-message {
