@@ -6,10 +6,10 @@ import { useNavigate } from "react-router-dom";
 
 import "../index.css";
 // when working on local version
-const API_URL = "http://localhost:3000";
+// const API_URL = "http://localhost:3000";
 
 // when working on deployment version
-// ?
+const API_URL = "https://mern-votehub.onrender.com/";
 
 function SignUpPage() {
   const [name, setName] = useState("");

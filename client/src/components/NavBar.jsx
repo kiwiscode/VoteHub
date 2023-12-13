@@ -6,10 +6,10 @@ import axios from "axios";
 import { Button, Stack } from "react-bootstrap";
 
 // when working on local version
-const API_URL = "http://localhost:3000";
+// const API_URL = "http://localhost:3000";
 
 // when working on deployment version
-// ?
+const API_URL = "https://mern-votehub.onrender.com/";
 
 function NavBar() {
   const navigate = useNavigate();

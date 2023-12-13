@@ -14,10 +14,10 @@ import { UserContext } from "../components/context/UserContext";
 import LoadingSpinner from "../components/LoadingSpinner";
 import "../index.css";
 // when working on local version
-const API_URL = "http://localhost:3000";
+// const API_URL = "http://localhost:3000";
 
 // when working on deployment version
-// ?
+const API_URL = "https://mern-votehub.onrender.com/";
 
 function CreateProjectPage() {
   const [title, setTitle] = useState("");

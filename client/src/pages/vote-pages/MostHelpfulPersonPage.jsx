@@ -4,7 +4,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { UserContext } from "../../components/context/UserContext";
 
-const API_URL = "http://localhost:3000";
+// when working on local version
+// const API_URL = "http://localhost:3000";
+
+// when working on deployment version
+const API_URL = "https://mern-votehub.onrender.com/";
 
 function MostHelpfulPersonPage() {
   const navigate = useNavigate();

@@ -5,10 +5,10 @@ import { UserContext } from "../components/context/UserContext";
 import { Container, Row, Col, Button, InputGroup, Form } from "react-bootstrap";
 Container;
 // when working on local version
-const API_URL = "http://localhost:3000";
+// const API_URL = "http://localhost:3000";
 
 // when working on deployment version
-// ?
+const API_URL = "https://mern-votehub.onrender.com/";
 
 function LoginPage() {
   const navigate = useNavigate();

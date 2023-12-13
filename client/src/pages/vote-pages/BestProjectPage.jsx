@@ -4,11 +4,11 @@ import { UserContext } from "../../components/context/UserContext";
 import { Col, Container, Row, Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 // when working on local version
-
-const API_URL = "http://localhost:3000";
+// when working on local version
+// const API_URL = "http://localhost:3000";
 
 // when working on deployment version
-// ?
+const API_URL = "https://mern-votehub.onrender.com/";
 function BestProjectPage() {
   const [projects, setProjects] = useState([]);
   const { getToken, userInfo } = useContext(UserContext);

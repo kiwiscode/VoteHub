@@ -4,10 +4,10 @@ import Carousel from "react-bootstrap/Carousel";
 import IronHackLogo from "../assets/logo-ironhack-blue.png";
 import { Link } from "react-router-dom";
 // when working on local version
-const API_URL = "http://localhost:3000";
+// const API_URL = "http://localhost:3000";
 
 // when working on deployment version
-// ?
+const API_URL = "https://mern-votehub.onrender.com/";
 
 function HomePage() {
   const [users, setUsers] = useState([]);
