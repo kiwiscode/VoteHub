@@ -118,7 +118,7 @@ function CreateProjectPage() {
         style={{
           position: "absolute",
           width: "100%",
-          top: "10%",
+          top: "15%",
           left: "15%",
         }}
       >
