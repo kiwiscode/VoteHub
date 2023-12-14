@@ -74,49 +74,14 @@ function MostHelpfulPersonPage() {
           position: "absolute",
           top: 100,
           left: 0,
-          padding: "10px",
           width: "15%",
-          fontSize: "25px",
           fontWeight: "400",
           color: "rgba(0, 0, 0, 0.8)",
         }}
       >
-        <Link
-          style={{ textDecoration: "none", color: "rgba(0, 0, 0, 0.8)" }}
-          to={"/"}
-        >
-          <div
-            style={{
-              border: "1px solid rgba(0,0,0,0.8)",
-              borderLeft: "none",
-              borderTop: "none",
-              borderRight: "none",
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              fill="currentColor"
-              className="bi bi-arrow-left"
-              viewBox="0 0 16 16"
-            >
-              <path d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
-            </svg>
-            <span
-              style={{
-                padding: "10px",
-                width: "15%",
-                fontSize: "25px",
-                fontWeight: "400",
-                color: "rgba(0, 0, 0, 0.8)",
-              }}
-            >
-              Go Home Page
-            </span>
-          </div>
-        </Link>
-        Choose the most supportive and helpful classmate <span>💪🏻</span>
+        <span>
+          Choose the most supportive and helpful classmate <span>💪🏻</span>
+        </span>
         <div className="mb-2">
           <Button
             onClick={() => submitVote()}
@@ -137,10 +102,8 @@ function MostHelpfulPersonPage() {
         style={{
           position: "absolute",
           top: 100,
-          right: -20,
-          padding: "10px",
-          width: "20%",
-          fontSize: "25px",
+          right: 0,
+          width: "15%",
           fontWeight: "400",
           color: "rgba(0, 0, 0, 0.8)",
         }}
@@ -159,9 +122,6 @@ function MostHelpfulPersonPage() {
           >
             <span
               style={{
-                padding: "10px",
-
-                fontSize: "25px",
                 fontWeight: "400",
                 color: "rgba(0, 0, 0, 0.8)",
               }}
