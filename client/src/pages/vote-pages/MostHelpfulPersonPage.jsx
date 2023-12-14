@@ -203,7 +203,8 @@ function MostHelpfulPersonPage() {
                     src={user.profileImage}
                     alt={user.name}
                     className="img-fluid"
-                    style={{ maxHeight: "150px", objectFit: "cover" }}
+                    // style={{ maxHeight: "150px", objectFit: "cover" }}
+                    style={{ maxWidth: "100%", height: "auto" }}
                   />
                   <div className="mt-2">
                     <h5>{user.name}</h5>
