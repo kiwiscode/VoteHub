@@ -52,8 +52,11 @@ router.post("/vote-for-funniest-person", (req, res) => {
             });
           }
         })
-        .catch((error) => {
-          console.error(error);
+        .catch(() => {
+          res.status(501).json({
+            errorMessage:
+              "To submit, you need to choose a friend as the most helpful person.",
+          });
         });
     })
     .catch((error) => {
@@ -110,8 +113,11 @@ router.post("/vote-for-helpful-person", (req, res) => {
             });
           }
         })
-        .catch((error) => {
-          console.error(error);
+        .catch(() => {
+          res.status(501).json({
+            errorMessage:
+              "To submit, you need to choose a friend as the most helpful person.",
+          });
         });
     })
     .catch((error) => {
@@ -185,9 +191,9 @@ router.post("/vote-for-best-project", (req, res) => {
         });
       });
   } else {
-    res
-      .status(501)
-      .json({ errorMessage: "You already voted for best project!" });
+    res.status(501).json({
+      errorMessage: "To submit, you should choose a minimum of 2 projects.",
+    });
   }
 });
 
