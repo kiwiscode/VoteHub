@@ -14,7 +14,11 @@ const logger = require("morgan");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-const FRONTEND_URL = process.env.ORIGIN || "http://localhost:5173";
+// when working on local version
+// const FRONTEND_URL = "http://localhost:5173";
+
+// when working on deployment version
+const FRONTEND_URL = "https://votehub-ih.netlify.app";
 
 // Middleware configuration
 module.exports = (app) => {
