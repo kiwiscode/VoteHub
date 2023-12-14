@@ -26,11 +26,35 @@ function HomePage() {
 
   return (
     <>
-      <div className="container">
+      <div
+        className="container"
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-evenly",
+        }}
+      >
         {users.map((user) => (
-          <div key={user._id} className="item">
-            <div className="student-card">
-              <img src={user.profileImage} alt={user.name} />
+          <div
+            key={user._id}
+            className="item"
+            style={{ width: "17%", margin: "10px", textAlign: "center" }}
+          >
+            <div
+              className="student-card"
+              style={{
+                backgroundColor: "#fff",
+                boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+                padding: "15px",
+                borderRadius: "8px",
+                transition: "box-shadow 0.3s ease in out",
+              }}
+            >
+              <img
+                src={user.profileImage}
+                alt={user.name}
+                style={{ maxWidth: "100%", height: "auto" }}
+              />
               <div>
                 <div>
                   <span className="variable-declaration">const </span>

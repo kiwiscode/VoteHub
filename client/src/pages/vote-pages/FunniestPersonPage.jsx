@@ -195,12 +195,22 @@ function FunniestPersonPage() {
           {users.map((user, index) => (
             <Col key={user._id} xs={12} sm={6} md={4} lg={3} className="mb-4">
               <div className="funniest-item">
-                <div className="student-card">
+                <div
+                  className="student-card"
+                  style={{
+                    backgroundColor: "#fff",
+                    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+                    padding: "15px",
+                    borderRadius: "8px",
+                    transition: "box-shadow 0.3s ease in out",
+                  }}
+                >
                   <img
                     src={user.profileImage}
                     alt={user.name}
                     className="img-fluid"
-                    style={{ maxHeight: "150px", objectFit: "cover" }}
+                    // style={{ maxHeight: "150px", objectFit: "cover" }}
+                    style={{ maxWidth: "100%", height: "auto" }}
                   />
                   <div className="mt-2">
                     <h5>{user.name}</h5>

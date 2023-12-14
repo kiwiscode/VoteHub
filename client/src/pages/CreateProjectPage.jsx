@@ -12,7 +12,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import { UserContext } from "../components/context/UserContext";
 import LoadingSpinner from "../components/LoadingSpinner";
-import "index.css";
+import "../index.css";
 // when working on local version
 // const API_URL = "http://localhost:3000";
 
@@ -170,7 +170,11 @@ function CreateProjectPage() {
                     <label
                       htmlFor="formuploadModal"
                       className="file-label"
-                      style={{ cursor: "pointer" }}
+                      style={{
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                      }}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

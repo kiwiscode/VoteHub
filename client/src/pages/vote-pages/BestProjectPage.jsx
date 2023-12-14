@@ -194,7 +194,16 @@ function BestProjectPage() {
               className="mb-4"
             >
               <div className="funniest-item">
-                <div className="project-card">
+                <div
+                  className="project-card"
+                  style={{
+                    backgroundColor: "#fff",
+                    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                    padding: "15px",
+                    borderRadius: "8px",
+                    transition: "box-shadow 0.3s ease-in-out",
+                  }}
+                >
                   <img
                     src={project.projectImages[0]}
                     alt={project.title}
@@ -206,6 +215,10 @@ function BestProjectPage() {
                       objectFit: "cover",
                       margin: "10px",
                       borderRadius: "5%",
+                      padding: "15px",
+                      backgroundColor: "#fff",
+                      boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                      transition: "box-shadow 0.3s ease-in-out",
                     }}
                   />
                   <img
