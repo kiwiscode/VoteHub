@@ -17,7 +17,7 @@ import "../index.css";
 // const API_URL = "http://localhost:3000";
 
 // when working on deployment version
-const API_URL = "https://mern-votehub.onrender.com/";
+const API_URL = "https://mern-votehub-ih.onrender.com";
 
 function CreateProjectPage() {
   const [title, setTitle] = useState("");

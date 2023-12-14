@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 // const API_URL = "http://localhost:3000";
 
 // when working on deployment version
-const API_URL = "https://mern-votehub.onrender.com/";
+const API_URL = "https://mern-votehub-ih.onrender.com";
 
 function HomePage() {
   const [users, setUsers] = useState([]);
