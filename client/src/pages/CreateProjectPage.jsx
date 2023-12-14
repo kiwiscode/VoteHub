@@ -12,7 +12,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import { UserContext } from "../components/context/UserContext";
 import LoadingSpinner from "../components/LoadingSpinner";
-import "../index.css";
+import "index.css";
 // when working on local version
 // const API_URL = "http://localhost:3000";
 

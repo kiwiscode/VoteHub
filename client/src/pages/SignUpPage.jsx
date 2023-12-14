@@ -4,7 +4,7 @@ import { Button, Form, InputGroup, Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
 
-import "../index.css";
+import "index.css";
 // when working on local version
 // const API_URL = "http://localhost:3000";
 
