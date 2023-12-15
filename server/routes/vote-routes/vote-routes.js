@@ -5,6 +5,7 @@ const Project = require("../../models/Project.Model");
 const { default: mongoose } = require("mongoose");
 router.post("/vote-for-funniest-person", (req, res) => {
   const { selectedUserId, userId } = req.body;
+
   User.findById(selectedUserId)
     .then((selectedUser) => {
       User.findById(userId)
@@ -52,13 +53,18 @@ router.post("/vote-for-funniest-person", (req, res) => {
             });
           }
         })
-        .catch((error) => {
-          console.error(error);
+        .catch(() => {
+          res.status(500).json({
+            errorMessage:
+              "To participate in the voting, please log in to your account and select a candidate.",
+          });
         });
     })
-    .catch((error) => {
-      console.error("Error:", error);
-      res.status(500).json({ errorMessage: "Internal Server Error" });
+    .catch(() => {
+      res.status(500).json({
+        errorMessage:
+          "To participate in the voting, please log in to your account and select a candidate.",
+      });
     });
 });
 
@@ -110,13 +116,18 @@ router.post("/vote-for-helpful-person", (req, res) => {
             });
           }
         })
-        .catch((error) => {
-          console.error(error);
+        .catch(() => {
+          res.status(500).json({
+            errorMessage:
+              "To participate in the voting, please log in to your account and select a candidate.",
+          });
         });
     })
-    .catch((error) => {
-      console.error("Error:", error);
-      res.status(500).json({ errorMessage: "Internal Server Error" });
+    .catch(() => {
+      res.status(500).json({
+        errorMessage:
+          "To participate in the voting, please log in to your account and select a candidate.",
+      });
     });
 });
 
@@ -126,6 +137,7 @@ router.post("/vote-for-best-project", (req, res) => {
 
   console.log("SELECTED PROJECTS =>", selectedProjects);
   console.log("ACTIVE USER WHO IS PICKING THE BEST PROJECTS =>", userId);
+
   if (
     selectedProjects.length === 2 &&
     selectedProjects[0].owners.length !== 0 &&
@@ -163,11 +175,6 @@ router.post("/vote-for-best-project", (req, res) => {
               projects[0].save();
               projects[1].save();
 
-              // res.status(200).json({
-              //   message:
-              //     "PROJECT 1 AND PROJECT 2 VOTED FROM A USERID AND ACTIVE USER isVotedForBestProject=true , voteCountForBestProject = 2(selectedProjects.length) , votedForBestProjects.push(project1ID,project2ID), then 2 projects finded by using Project.find and multiple project finded first project it means PROJECT 1 receivedVotes.push(userId), PROJECT 2 receivedVotes.push(userId) and then project 1 and project 2 saved to the database. ",
-              // });
-
               res.status(200).json({
                 message: "The voting has been successfully completed!",
               });
@@ -177,17 +184,21 @@ router.post("/vote-for-best-project", (req, res) => {
                 errorMessage: "Error occured while fetching the projects",
               });
             });
+        } else {
+          res.status(501).json({
+            errorMessage: "You already voted for best project!",
+          });
         }
       })
       .catch(() => {
         res.status(501).json({
-          errorMessage: "You already voted for best project!",
+          errorMessage: "Please log in to your account and select a candidate.",
         });
       });
   } else {
-    res
-      .status(501)
-      .json({ errorMessage: "You already voted for best project!" });
+    res.status(500).json({
+      errorMessage: "Select Two Projects for Your Vote.",
+    });
   }
 });
 

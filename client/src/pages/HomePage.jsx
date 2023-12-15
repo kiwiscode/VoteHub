@@ -36,7 +36,7 @@ function HomePage() {
                   <span className="variable-declaration">const </span>
                   <span className="variable-name">name</span>{" "}
                   <span className="variable-declaration-operator">=</span>{" "}
-                  <span className="variable-value-string">{`"${user.name}"`}</span>
+                  <span className="variable-value-string">{`"${user.name}";`}</span>
                 </div>
                 <div>
                   <span className="variable-declaration">const </span>
@@ -45,7 +45,7 @@ function HomePage() {
                   {/* start to check for projectName !  */}
                   <span className="variable-value-string">
                     {user.project.length ? (
-                      <span>{user.project[0].title}</span>
+                      <span>{`"${user.project[0].title}";`}</span>
                     ) : (
                       <span>Not created yet</span>
                     )}
@@ -58,7 +58,7 @@ function HomePage() {
                       <span className="variable-declaration">const</span>{" "}
                       <span className="variable-name">isSoleDeveloper</span>{" "}
                       <span className="variable-declaration-operator">=</span>{" "}
-                      <span className="variable-value-boolean">true</span>
+                      <span className="variable-value-boolean">true;</span>
                     </div>
                   </div>
                 ) : (
@@ -66,7 +66,7 @@ function HomePage() {
                     <span className="variable-declaration">const</span>{" "}
                     <span className="variable-name">isTeamDeveloper</span>{" "}
                     <span className="variable-declaration-operator">=</span>{" "}
-                    <span className="variable-value-boolean">true</span>
+                    <span className="variable-value-boolean">true;</span>
                     <br />
                   </div>
                 )}

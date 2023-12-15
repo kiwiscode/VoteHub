@@ -33,6 +33,9 @@ app.use("/project", projectRoutes);
 const voteRoutes = require("./routes/vote-routes/vote-routes");
 app.use("/", voteRoutes);
 
+const resultRoutes = require("./routes/result-routes/result.routes");
+app.use("/", resultRoutes);
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
