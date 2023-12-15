@@ -184,16 +184,36 @@ function BestProjectPage() {
                     }}
                   />
                   <div className="mt-2">
-                    <h5>{project.title}</h5>
+                    <div>
+                      <span className="variable-declaration">const </span>
+                      <span className="variable-name">projectName</span>{" "}
+                      <span className="variable-declaration-operator">=</span>{" "}
+                      <span className="variable-value-string">{`"${project.title}";`}</span>
+                    </div>
+                    <div>
+                      <span className="variable-declaration">const </span>
+                      <span className="variable-name">teamMembers</span>{" "}
+                      <span className="variable-declaration-operator">=</span>{" "}
+                      <span className="variable-value-string">{`["${project.owners
+                        .map((owner) => owner.name)
+                        .join('", "')}" ];`}</span>
+                    </div>
                     {project.owners.map((owner) => (
                       <div key={project.id}>
                         <div>
+                          <div>
+                            <span className="variable-declaration">const </span>
+                            <span className="variable-name">name</span>{" "}
+                            <span className="variable-declaration-operator">
+                              =
+                            </span>{" "}
+                            <span className="variable-value-string">{`"${owner.name}";`}</span>
+                          </div>
                           <img
                             style={{ maxWidth: "75px", margin: "5px" }}
                             src={owner.profileImage}
                             alt={owner.name}
                           />
-                          <span>{owner.name}</span>
                         </div>
                       </div>
                     ))}
@@ -202,6 +222,7 @@ function BestProjectPage() {
                       <Form.Check
                         type="switch"
                         id={`project-switch-${project._id}`}
+                        className="variable-name"
                         label={`Vote for ${project.title}`}
                         onChange={() => handleBestProjectVoteChange(project)}
                         checked={selectedProjects.some(
