@@ -172,8 +172,8 @@ function VoteFinishPage() {
                   <span className="variable-name">voteCount</span>{" "}
                   <span className="variable-declaration-operator">=</span>{" "}
                   <span className="variable-value-string">
-                    {bestProjects[0].owners
-                      ? `${bestProjects[0].owners.length};`
+                    {bestProjects[0].receivedVotes
+                      ? `${bestProjects[0].receivedVotes.length};`
                       : ""}
                   </span>
                 </div>
@@ -246,8 +246,8 @@ function VoteFinishPage() {
                   <span className="variable-name">voteCount</span>{" "}
                   <span className="variable-declaration-operator">=</span>{" "}
                   <span className="variable-value-string">
-                    {bestProjects[1].owners
-                      ? `${bestProjects[1].owners.length};`
+                    {bestProjects[1].receivedVotes
+                      ? `${bestProjects[1].receivedVotes.length};`
                       : ""}
                   </span>
                 </div>
