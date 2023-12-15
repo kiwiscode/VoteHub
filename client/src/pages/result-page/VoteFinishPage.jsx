@@ -3,10 +3,10 @@ import axios from "axios";
 import { Container, Row, Col } from "react-bootstrap";
 
 // when working on local version
-const API_URL = "http://localhost:3000";
+// const API_URL = "http://localhost:3000";
 
 // when working on deployment version
-// ?
+const API_URL = "https://mern-votehub-ih.onrender.com";
 
 function VoteFinishPage() {
   const [funniestPerson, setFunniestPerson] = useState([]);
@@ -166,6 +166,18 @@ function VoteFinishPage() {
                   <span className="variable-declaration-operator">=</span>{" "}
                   <span className="variable-value-string">{`"${bestProjects[0].title}";`}</span>
                 </div>
+
+                <div>
+                  <span className="variable-declaration">const </span>
+                  <span className="variable-name">voteCount</span>{" "}
+                  <span className="variable-declaration-operator">=</span>{" "}
+                  <span className="variable-value-string">
+                    {bestProjects[0].owners
+                      ? `${bestProjects[0].owners.length};`
+                      : ""}
+                  </span>
+                </div>
+
                 {/* start to check first project pictures */}
                 <img
                   src={bestProjects[0].projectImages[0]}
@@ -183,6 +195,9 @@ function VoteFinishPage() {
                 {/* finish to check first project pictures */}
                 {bestProjects[0].owners ? (
                   <>
+                    <div>
+                      <span></span>
+                    </div>
                     <div>
                       <span className="variable-declaration">const </span>
                       <span className="variable-name">teamMembers</span>{" "}
@@ -225,6 +240,16 @@ function VoteFinishPage() {
                   <span className="variable-name">projectName</span>{" "}
                   <span className="variable-declaration-operator">=</span>{" "}
                   <span className="variable-value-string">{`"${bestProjects[1].title}";`}</span>
+                </div>
+                <div>
+                  <span className="variable-declaration">const </span>
+                  <span className="variable-name">voteCount</span>{" "}
+                  <span className="variable-declaration-operator">=</span>{" "}
+                  <span className="variable-value-string">
+                    {bestProjects[1].owners
+                      ? `${bestProjects[1].owners.length};`
+                      : ""}
+                  </span>
                 </div>
                 <img
                   src={bestProjects[1].projectImages[0]}
