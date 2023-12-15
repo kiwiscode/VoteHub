@@ -3,10 +3,10 @@ import axios from "axios";
 import { Container, Row, Col } from "react-bootstrap";
 
 // when working on local version
-const API_URL = "http://localhost:3000";
+// const API_URL = "http://localhost:3000";
 
 // when working on deployment version
-// ?
+const API_URL = "https://mern-votehub-ih.onrender.com";
 
 function VoteFinishPage() {
   const [funniestPerson, setFunniestPerson] = useState([]);
